@@ -1,0 +1,9 @@
+*.DotSettings
+*.suo
+*.user
+.idea/
+.vs/
+.backup/
+obj
+bin
+packages
