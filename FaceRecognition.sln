@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceRecognition", "FaceRecognition\FaceRecognition.csproj", "{48BABF4F-B6C6-446B-A0C3-2DACF59D2174}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceRecognition.Infrastructure", "FaceRecognition.Infrastructure\FaceRecognition.Infrastructure.csproj", "{3236E251-809E-42BD-8187-6E3602A14E16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceRecognition.PythonScripts", "FaceRecognition.PythonScripts\FaceRecognition.PythonScripts.csproj", "{44985042-E46C-4A58-A5F2-CEB9E5E6A1DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{48BABF4F-B6C6-446B-A0C3-2DACF59D2174}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48BABF4F-B6C6-446B-A0C3-2DACF59D2174}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48BABF4F-B6C6-446B-A0C3-2DACF59D2174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3236E251-809E-42BD-8187-6E3602A14E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3236E251-809E-42BD-8187-6E3602A14E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3236E251-809E-42BD-8187-6E3602A14E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3236E251-809E-42BD-8187-6E3602A14E16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44985042-E46C-4A58-A5F2-CEB9E5E6A1DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44985042-E46C-4A58-A5F2-CEB9E5E6A1DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44985042-E46C-4A58-A5F2-CEB9E5E6A1DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44985042-E46C-4A58-A5F2-CEB9E5E6A1DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
