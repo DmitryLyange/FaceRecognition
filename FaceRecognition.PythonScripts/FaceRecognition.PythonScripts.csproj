@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlgorithmsController.cs" />
-    <Compile Include="Models\Algorithms.cs" />
+    <Compile Include="Helpers\ScriptLauncher.cs" />
     <Compile Include="Models\OutputModel.cs" />
     <Compile Include="Models\PCAModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

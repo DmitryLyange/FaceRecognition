@@ -2,7 +2,7 @@
 
 namespace FaceRecognition.Infrastructure
 {
-    public class PCAConfigurationSection: ConfigurationSection
+    public class PCAConfigurationSection : ConfigurationSection
     {
         [ConfigurationProperty("directory", IsRequired = true)]
         public string Directory
