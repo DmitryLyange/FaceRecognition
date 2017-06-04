@@ -2,8 +2,21 @@
 <script src="../../Scripts/main.js"></script>
 <link rel="stylesheet" type="text/css" href="../../Styles/main.css">
 <div class='toolbar js-toolbar'>
-    <button class="button">do-foo1</button>
-    <button class="button">do-foo2</button>
-    <button class="button">do-foo3</button>
+    <button class="button" id='1' onclick="trainFirst()">Train by first algorithm</button>
+    <button class="button" id='2' onclick="trainSecond()">Train by second algorithm</button>
+    <button class="button" id='3' onclick="trainThird()">Train by third algorithm</button>
 </div>
-<div class='main-body js-main-body'></div>
+<div class='main-body js-main-body'>
+    <form class='card-container js-card'>
+        <h2>Some training data</h2>
+        Ошибки первого рода:<br>
+        <input class="card-input" type="text" name="firstname" readonly><br>
+        Ошибки второго рода:<br>
+        <input class="card-input" type="text" name="lastname" readonly><br>
+        Скорость обучения:<br>
+        <input class="card-input" type="text" name="lastname" readonly><br>
+        Скорость предсказания:<br>
+        <input class="card-input" type="text" name="lastname" readonly><br>
+    </form>
+</div>
+
