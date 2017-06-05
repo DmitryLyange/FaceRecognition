@@ -8,3 +8,4 @@ obj
 bin
 packages
 /FaceRecognition.PythonScripts/*.DotSettings
+/FaceRecognition/*.DotSettings

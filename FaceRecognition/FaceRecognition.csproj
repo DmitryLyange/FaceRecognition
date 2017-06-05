@@ -122,7 +122,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -157,11 +156,14 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\BaseWebApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\AlgorithmController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\WebApiErrorModel.cs" />
+    <Compile Include="Models\WebApiResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -205,9 +207,9 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FaceRecognition.PythonScripts\FaceRecognition.PythonScripts.csproj">
+    <ProjectReference Include="..\PythonScripts\PythonScripts.csproj">
       <Project>{44985042-e46c-4a58-a5f2-ceb9e5e6a1de}</Project>
-      <Name>FaceRecognition.PythonScripts</Name>
+      <Name>PythonScripts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

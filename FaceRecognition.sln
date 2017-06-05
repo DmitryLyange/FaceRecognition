@@ -5,9 +5,9 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceRecognition", "FaceRecognition\FaceRecognition.csproj", "{48BABF4F-B6C6-446B-A0C3-2DACF59D2174}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceRecognition.Infrastructure", "FaceRecognition.Infrastructure\FaceRecognition.Infrastructure.csproj", "{3236E251-809E-42BD-8187-6E3602A14E16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{3236E251-809E-42BD-8187-6E3602A14E16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceRecognition.PythonScripts", "FaceRecognition.PythonScripts\FaceRecognition.PythonScripts.csproj", "{44985042-E46C-4A58-A5F2-CEB9E5E6A1DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PythonScripts", "PythonScripts\PythonScripts.csproj", "{44985042-E46C-4A58-A5F2-CEB9E5E6A1DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlgorithmsController.cs" />
+    <Compile Include="AlgorithmService.cs" />
     <Compile Include="Helpers\ScriptLauncher.cs" />
     <Compile Include="Models\OutputModel.cs" />
     <Compile Include="Models\PCAModel.cs" />
@@ -48,14 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Scripts\test.py" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Scripts\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FaceRecognition.Infrastructure\FaceRecognition.Infrastructure.csproj">
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
       <Project>{3236e251-809e-42bd-8187-6e3602a14e16}</Project>
-      <Name>FaceRecognition.Infrastructure</Name>
+      <Name>Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
