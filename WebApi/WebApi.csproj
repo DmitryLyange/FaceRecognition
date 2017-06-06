@@ -47,9 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\BaseWebApiController.cs" />
+    <Compile Include="Exceptions\RequestedOperationFailedException.cs" />
+    <Compile Include="Exceptions\WebApiException.cs" />
     <Compile Include="Models\WebApiErrorModel.cs" />
     <Compile Include="Models\WebApiResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\ApiHelper.cs" />
+    <Compile Include="Tools\ExceptionHandlerAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

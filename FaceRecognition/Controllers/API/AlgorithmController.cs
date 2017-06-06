@@ -6,6 +6,7 @@ using FaceRecognition.WebApi;
 
 namespace FaceRecognition
 {
+    [ExceptionHandler]
     [RoutePrefix("api/Algorithm")]
     public class AlgorithmController : BaseWebApiController
     {
