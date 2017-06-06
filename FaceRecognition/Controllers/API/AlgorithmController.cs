@@ -8,7 +8,8 @@ namespace FaceRecognition
 {
     [ExceptionHandler]
     [RoutePrefix("api/Algorithm")]
-    public class AlgorithmController : BaseWebApiController
+    //public class AlgorithmController : BaseWebApiController
+    public class AlgorithmController : ApiController
     {
         /// <summary>
         /// 
@@ -19,7 +20,8 @@ namespace FaceRecognition
         /// </returns>
         [Route("{algorithmName}")]
         [HttpGet]
-        public WebApiResponse<IEnumerable<string>> Get(string algorithmName)
+        //public WebApiResponse<IEnumerable<string>> Get(string algorithmName)
+        public IEnumerable<string> Get(string algorithmName)
         {
             AlgorithmType algorithmType;
             Enum.TryParse(algorithmName, out algorithmType);
@@ -28,7 +30,8 @@ namespace FaceRecognition
 
             //TODO return smth meaningful
             var test = new[] { "value1", "value2" };
-            return CreateResponse((IEnumerable<string>)test);
+            //return CreateResponse((IEnumerable<string>)test);
+            return test;
         }
 
         //public string Get(int id)

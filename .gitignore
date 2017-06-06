@@ -10,3 +10,4 @@ packages
 /FaceRecognition.PythonScripts/*.DotSettings
 /FaceRecognition/*.DotSettings
 /WebApi/*.DotSettings
+/PythonScripts/*.DotSettings

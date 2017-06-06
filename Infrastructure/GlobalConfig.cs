@@ -2,7 +2,7 @@
 
 namespace FaceRecognition.Infrastructure
 {
-    public class GlobalConfig
+    public static class GlobalConfig
     {
         private static string _pythonExePath;
         public static string PythonExePath
@@ -28,17 +28,59 @@ namespace FaceRecognition.Infrastructure
             }
         }
 
+        private static string _pCAScriptName;
+        public static string PCAScriptName
+        {
+            get
+            {
+                if (_pCAScriptName == null)
+                    LoadConfig();
+
+                return _pCAScriptName;
+            }
+        }
+
+        private static string _cNNDataDirectory;
+        public static string CNNDataDirectory
+        {
+            get
+            {
+                if (_cNNDataDirectory == null)
+                    LoadConfig();
+
+                return _cNNDataDirectory;
+            }
+        }
+
+        private static string _cNNScriptName;
+        public static string CNNScriptName
+        {
+            get
+            {
+                if (_cNNScriptName == null)
+                    LoadConfig();
+
+                return _cNNScriptName;
+            }
+        }
+
 
         private static PythonConfigurationSection _pythonConfig;
-        private static PCAConfigurationSection _pcaConfig;
+        private static AlgorithmConfigurationSection _pCAConfig;
+        private static AlgorithmConfigurationSection _cNNConfig;
 
         private static void LoadConfig()
         {
-            _pythonConfig = (PythonConfigurationSection)ConfigurationManager.GetSection("PythonConfiguration");
-            _pCADataDirectory = _pythonConfig.ExePath;
+            _pythonConfig = (PythonConfigurationSection)ConfigurationManager.GetSection("pythonConfiguration");
+            _pythonExePath = _pythonConfig.ExePath;
 
-            _pcaConfig = (PCAConfigurationSection)ConfigurationManager.GetSection("PCAConfiguration");
-            _pCADataDirectory = _pcaConfig.Directory;
+            _pCAConfig = (AlgorithmConfigurationSection)ConfigurationManager.GetSection("pCAConfiguration");
+            _pCADataDirectory = _pCAConfig.DataDirectory;
+            _pCAScriptName = _pCAConfig.ScriptName;
+
+            _cNNConfig = (AlgorithmConfigurationSection)ConfigurationManager.GetSection("cNNConfiguration");
+            _cNNDataDirectory = _cNNConfig.DataDirectory;
+            _cNNScriptName = _cNNConfig.ScriptName;
         }
     }
 }
