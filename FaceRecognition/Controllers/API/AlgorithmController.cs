@@ -7,7 +7,7 @@ using FaceRecognition.WebApi;
 namespace FaceRecognition
 {
     [ExceptionHandler]
-    [RoutePrefix("api/Algorithm")]
+    [RoutePrefix("Api/Algorithm")]
     //public class AlgorithmController : BaseWebApiController
     public class AlgorithmController : ApiController
     {
@@ -27,28 +27,10 @@ namespace FaceRecognition
             Enum.TryParse(algorithmName, out algorithmType);
             AlgorithmService.GetResults(algorithmType);
 
-
             //TODO return smth meaningful
             var test = new[] { "value1", "value2" };
             //return CreateResponse((IEnumerable<string>)test);
             return test;
         }
-
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
-
-        //public void Post([FromBody]string value)
-        //{
-        //}
-
-        //public void Put(int id, [FromBody]string value)
-        //{
-        //}
-
-        //public void Delete(int id)
-        //{
-        //}
     }
 }

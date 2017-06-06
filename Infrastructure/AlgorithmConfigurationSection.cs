@@ -2,7 +2,7 @@
 
 namespace FaceRecognition.Infrastructure
 {
-    public abstract class AlgorithmConfigurationSection : ConfigurationSection
+    public class AlgorithmConfigurationSection : ConfigurationSection
     {
         [ConfigurationProperty("dataDirectory", IsRequired = true)]
         public string DataDirectory

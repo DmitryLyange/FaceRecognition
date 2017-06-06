@@ -4,7 +4,9 @@ namespace FaceRecognition.PythonScripts
 {
     public enum AlgorithmType
     {
+        //Principal Component Analysis
         PCA,
+        //Convolutional Neural Network
         CNN
     }
 

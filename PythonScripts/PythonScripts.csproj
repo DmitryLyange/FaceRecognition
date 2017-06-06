@@ -44,7 +44,6 @@
     <Compile Include="AlgorithmService.cs" />
     <Compile Include="Helpers\ScriptLauncher.cs" />
     <Compile Include="Models\OutputModel.cs" />
-    <Compile Include="Models\PCAModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
