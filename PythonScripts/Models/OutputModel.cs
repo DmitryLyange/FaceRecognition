@@ -5,6 +5,7 @@ namespace FaceRecognition.PythonScripts
     public enum AlgorithmType
     {
         PCA,
+        CNN
     }
 
     [Serializable]

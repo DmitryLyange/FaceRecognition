@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace FaceRecognition
+namespace FaceRecognition.WebApi
 {
     [DataContract]
     public class WebApiError

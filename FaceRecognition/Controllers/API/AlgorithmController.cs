@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Web.Http;
 using FaceRecognition.PythonScripts;
+using FaceRecognition.WebApi;
 
 namespace FaceRecognition
 {
@@ -25,8 +26,8 @@ namespace FaceRecognition
 
 
             //TODO return smth meaningful
-            var test = new [] {"value1", "value2"};
-            return CreateResponse((IEnumerable<string>) test);
+            var test = new[] { "value1", "value2" };
+            return CreateResponse((IEnumerable<string>)test);
         }
 
         //public string Get(int id)

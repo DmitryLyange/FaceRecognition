@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace FaceRecognition
+namespace FaceRecognition.WebApi
 {
     [DataContract]
     public class WebApiResponse<T>

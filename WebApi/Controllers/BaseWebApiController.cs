@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace FaceRecognition
+namespace FaceRecognition.WebApi
 {
     public class BaseWebApiController : ApiController
     {
