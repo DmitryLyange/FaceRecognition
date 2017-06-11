@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
+    <Content Include="Scripts\CNN.ipynb" />
     <None Include="Scripts\test.ipynb" />
     <None Include="Scripts\test.py" />
   </ItemGroup>
