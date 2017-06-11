@@ -2,9 +2,10 @@
 <script src="../../Scripts/main.js"></script>
 <link rel="stylesheet" type="text/css" href="../../Styles/main.css">
 <div class='toolbar js-toolbar'>
-    <button class="button" id='1' onclick="trainFirst()">Train by first algorithm</button>
-    <button class="button" id='2' onclick="trainSecond()">Train by second algorithm</button>
-    <button class="button" id='3' onclick="trainThird()">Train by third algorithm</button>
+    <button class="button" onclick="trainFirst()">Train by first algorithm</button>
+    <button class="button" onclick="trainSecond()">Train by second algorithm</button>
+    <button class="button" onclick="trainThird()">Train by third algorithm</button>
+    <button class="button" onclick="createGraph()">createGraph</button>
 </div>
 <div class='main-body js-main-body' id='cardContainer'>
     <form class='card-container js-card' id='prototypeCard'>
@@ -19,4 +20,5 @@
         <input class="card-input" type="text" name="lastname" readonly><br>
     </form>
 </div>
+<svg width="960" height="500"></svg>
 
