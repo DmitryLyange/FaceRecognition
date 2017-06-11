@@ -13,5 +13,12 @@ namespace FaceRecognition.PythonScripts
     [Serializable]
     public class OutputModel
     {
+        public string FirstTypeErrors { get; set; }
+
+        public string SecondTypeErrors { get; set; }
+
+        public string LearningSpeed { get; set; }
+
+        public string RecognizingSpeed { get; set; }
     }
 }

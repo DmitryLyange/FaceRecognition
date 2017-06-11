@@ -1,4 +1,2 @@
 s = 'Hello, world.'
-print(s)
-
-
+print("10 11 12 13")

@@ -23,10 +23,7 @@ namespace FaceRecognition.PythonScripts
                     break;
             }
 
-            ScriptLauncher.RunScript(scriptName, args);
-
-            //TODO
-            return new OutputModel();
+            return ScriptLauncher.RunScript(scriptName, args);
         }
     }
 }

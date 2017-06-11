@@ -20,17 +20,13 @@ namespace FaceRecognition
         /// </returns>
         [Route("{algorithmName}")]
         [HttpGet]
-        //public WebApiResponse<IEnumerable<string>> Get(string algorithmName)
-        public IEnumerable<string> Get(string algorithmName)
+        public OutputModel Get(string algorithmName)
         {
             AlgorithmType algorithmType;
             Enum.TryParse(algorithmName, out algorithmType);
-            AlgorithmService.GetResults(algorithmType);
+            var result = AlgorithmService.GetResults(algorithmType);
 
-            //TODO return smth meaningful
-            var test = new[] { "value1", "value2" };
-            //return CreateResponse((IEnumerable<string>)test);
-            return test;
+            return result;
         }
     }
 }

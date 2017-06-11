@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.IO;
 using FaceRecognition.Infrastructure;
 
 namespace FaceRecognition.PythonScripts
@@ -8,7 +7,7 @@ namespace FaceRecognition.PythonScripts
     public static class ScriptLauncher
     {
         //TODO return value - (OutputModel)?
-        public static void RunScript(string scriptName, string args)
+        public static OutputModel RunScript(string scriptName, string args)
         {
             var start = new ProcessStartInfo
             {
@@ -25,8 +24,24 @@ namespace FaceRecognition.PythonScripts
                 using (var reader = process.StandardOutput)
                 {
                     var stderr = process.StandardError.ReadToEnd();
-                    var result = reader.ReadToEnd();
-                    //TODO return result;
+                    //removing end of line symbols
+                    var pythonResult = reader.ReadToEnd().Trim(new[] { '\r', '\n' });
+                    //separating values
+                    char[] delimeterChars = {' '};
+                    var pythonResultArray = pythonResult.Split(delimeterChars);
+
+                    if (pythonResultArray.Length != 4)
+                    {
+                        throw new Exception(stderr);
+                    }
+
+                    return new OutputModel()
+                    {
+                        FirstTypeErrors = pythonResultArray[0],
+                        SecondTypeErrors = pythonResultArray[1],
+                        LearningSpeed = pythonResultArray[2],
+                        RecognizingSpeed = pythonResultArray[3]
+                    };
                 }
             }
         }
