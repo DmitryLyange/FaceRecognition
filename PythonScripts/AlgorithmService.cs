@@ -1,5 +1,4 @@
-﻿using System;
-using FaceRecognition.Infrastructure;
+﻿using FaceRecognition.Infrastructure;
 
 namespace FaceRecognition.PythonScripts
 {

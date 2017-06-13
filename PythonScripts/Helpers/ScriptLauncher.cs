@@ -6,7 +6,6 @@ namespace FaceRecognition.PythonScripts
 {
     public static class ScriptLauncher
     {
-        //TODO return value - (OutputModel)?
         public static OutputModel RunScript(string scriptName, string args)
         {
             var start = new ProcessStartInfo
