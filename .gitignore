@@ -11,3 +11,6 @@ packages
 /FaceRecognition/*.DotSettings
 /WebApi/*.DotSettings
 /PythonScripts/*.DotSettings
+*.jpg
+*.npy
+*.pyc
