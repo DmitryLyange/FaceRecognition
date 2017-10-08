@@ -94,6 +94,18 @@ body {
 .noAccess-grid-cell {
     grid-area: noaccess;
 }
+.hasAccessSelf-grid-cell {
+    grid-area: hasaccessself;
+}
+.hasAccessNotSelf-grid-cell {
+    grid-area: hasaccessnotself;
+}
+.noAccessSelf-grid-cell {
+    grid-area: noaccessself;
+}
+.noAccessNotSelf-grid-cell {
+    grid-area: noaccessnotself;
+}
 .predictedCondition-grid-cell {
     grid-area: predcond;
 }
@@ -165,8 +177,9 @@ body {
 .table-body {
     display: grid;
     grid-template-areas: 'empty empty empty truecondition truecondition truecondition truecondition truecondition'
-                         'empty empty empty insystem insystem insystem notinsystem notinsystem'
-                         'empty empty empty hasaccess noaccess noaccess notinsystem notinsystem'
+                         'empty empty empty insystem insystem insystem insystem notinsystem'
+                         'empty empty empty hasaccess hasaccess noaccess noaccess notinsystem'
+                         'empty empty empty hasaccessself hasaccessnotself noaccessself noaccessnotself notinsystem'
                          'predcond inSystemHoriz hasaccessHoriz cell1 cell2 cell3 cell3 cell4'
                          'predcond inSystemHoriz noaccessHoriz cell5 cell5 cell6 cell7 cell8'
                          'predcond notinsystemHoriz notinsystemHoriz cell9 cell9 cell10 cell10 cell11';
