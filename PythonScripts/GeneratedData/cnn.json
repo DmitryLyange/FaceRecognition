@@ -1,0 +1,26 @@
+{
+    "ContingencyTable": [ 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1 ],
+    "PerformanceRates": {
+        "Precision": 10,
+        "Recall": 15,
+        "Miss": 20,
+        "FallOut": 25,
+        "Accuracy": 40
+    },
+    "RocCurve": {
+        "Points": [
+            {
+                "X": 5,
+                "Y": 10
+            },
+            {
+                "X": 15,
+                "Y": 20
+            },
+            {
+                "X": 25,
+                "Y": 30
+            }
+        ]
+    }
+}

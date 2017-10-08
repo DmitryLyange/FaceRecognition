@@ -6,7 +6,7 @@ namespace FaceRecognition.PythonScripts
 {
     public static class ScriptLauncher
     {
-        public static OutputModel RunScript(string scriptName, string args)
+        public static AlgorithmOutputModel RunScript(string scriptName, string args)
         {
             var start = new ProcessStartInfo
             {
@@ -34,13 +34,7 @@ namespace FaceRecognition.PythonScripts
                         throw new Exception(stderr);
                     }
 
-                    return new OutputModel()
-                    {
-                        FirstTypeErrors = pythonResultArray[0],
-                        SecondTypeErrors = pythonResultArray[1],
-                        LearningSpeed = pythonResultArray[2],
-                        RecognizingSpeed = pythonResultArray[3]
-                    };
+                    return new AlgorithmOutputModel();
                 }
             }
         }
