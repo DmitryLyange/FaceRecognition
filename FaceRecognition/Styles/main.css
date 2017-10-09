@@ -176,13 +176,14 @@ body {
 
 .table-body {
     display: grid;
-    grid-template-areas: 'empty empty empty truecondition truecondition truecondition truecondition truecondition'
-                         'empty empty empty insystem insystem insystem insystem notinsystem'
-                         'empty empty empty hasaccess hasaccess noaccess noaccess notinsystem'
-                         'empty empty empty hasaccessself hasaccessnotself noaccessself noaccessnotself notinsystem'
-                         'predcond inSystemHoriz hasaccessHoriz cell1 cell2 cell3 cell3 cell4'
-                         'predcond inSystemHoriz noaccessHoriz cell5 cell5 cell6 cell7 cell8'
-                         'predcond notinsystemHoriz notinsystemHoriz cell9 cell9 cell10 cell10 cell11';
+    grid-template-areas: 'empty empty empty empty truecondition truecondition truecondition'
+                         'empty empty empty empty insystem insystem notinsystem'
+                         'empty empty empty empty hasaccess noaccess notinsystem'
+                         'predcond inSystemHoriz hasaccessHoriz hasaccessself cell1 cell3 cell4'
+                         'predcond inSystemHoriz hasaccessHoriz hasaccessnotself cell2 cell3 cell4'
+                         'predcond inSystemHoriz noaccessHoriz noaccessself cell5 cell6 cell8'
+                         'predcond inSystemHoriz noaccessHoriz noaccessnotself cell5 cell7 cell8'
+                         'predcond notinsystemHoriz notinsystemHoriz notinsystemHoriz cell9 cell10 cell11';
 
     margin:0.5rem;
     font-weight:bold;
