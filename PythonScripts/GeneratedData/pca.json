@@ -1,5 +1,5 @@
 {
-    "ContingencyTable": [ 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1 ],
+    "ContingencyTable": [ 1237, 13, 37, 0, 2, 973, 43, 2, 0, 0, 26 ],
     "PerformanceRates": {
         "Precision": 10,
         "Recall": 15,
