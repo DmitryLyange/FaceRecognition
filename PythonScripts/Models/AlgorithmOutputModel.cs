@@ -24,30 +24,10 @@ namespace FaceRecognition.PythonScripts
         public List<int> ContingencyTable { get; set; }
 
         [DataMember]
-        public PerformanceMetrics PerformanceRates { get; set; }
+        public List<double> PerformanceRates { get; set; }
 
         [DataMember]
         public RocAuc RocCurve { get; set; }
-    }
-
-    [DataContract]
-    [Serializable]
-    public class PerformanceMetrics
-    {
-        [DataMember]
-        public double Precision { get; set; }
-
-        [DataMember]
-        public double Recall { get; set; }
-
-        [DataMember]
-        public double Miss { get; set; }
-
-        [DataMember]
-        public double FallOut { get; set; }
-
-        [DataMember]
-        public double Accuracy { get; set; }
     }
 
     [DataContract]

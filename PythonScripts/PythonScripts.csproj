@@ -64,6 +64,9 @@
     <None Include="GeneratedData\pca.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="GeneratedData\result.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Scripts\test.ipynb" />
     <None Include="Scripts\test.py" />
