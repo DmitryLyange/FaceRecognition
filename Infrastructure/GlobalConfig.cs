@@ -64,10 +64,23 @@ namespace FaceRecognition.Infrastructure
             }
         }
 
+        private static string _resultsDirectory;
+        public static string ResultsDirectory
+        {
+            get
+            {
+                if (_resultsDirectory == null)
+                    LoadConfig();
+
+                return _resultsDirectory;
+            }
+        }
+
 
         private static PythonConfigurationSection _pythonConfig;
         private static AlgorithmConfigurationSection _pCAConfig;
         private static AlgorithmConfigurationSection _cNNConfig;
+        private static ResultsConfigurationSection _resultsConfig;
 
         private static void LoadConfig()
         {
@@ -81,6 +94,9 @@ namespace FaceRecognition.Infrastructure
             _cNNConfig = (AlgorithmConfigurationSection)ConfigurationManager.GetSection("cNNConfiguration");
             _cNNDataDirectory = _cNNConfig.DataDirectory;
             _cNNScriptName = _cNNConfig.ScriptName;
+
+            _resultsConfig = (ResultsConfigurationSection)ConfigurationManager.GetSection("resultsConfiguration");
+            _resultsDirectory = _resultsConfig.DataDirectory;
         }
     }
 }

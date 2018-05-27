@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using FaceRecognition.Infrastructure;
 
 namespace FaceRecognition.PythonScripts
 {
@@ -36,7 +37,8 @@ namespace FaceRecognition.PythonScripts
 
         public static List<double> GetData(AlgorithmType classifier)
         {
-            var filePath = @"C:\Users\-\projects\FaceRecognition\PythonScripts\GeneratedData\pcaMetric.json";
+            var resultsDirectory = GlobalConfig.ResultsDirectory;
+            var filePath = Path.Combine(resultsDirectory, "pcaMetric.json");
             var result = default(List<double>);
             //TODO
 

@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
+using FaceRecognition.Infrastructure;
 
 namespace FaceRecognition.PythonScripts
 {
     public static class AlgorithmService
     {
-        private const string PCAPath = @"C:\projects\FaceRecognition\FaceRecognition\bin\GeneratedData\pca.json";
-        private const string CNNPath = @"C:\projects\FaceRecognition\FaceRecognition\bin\GeneratedData\cnn.json";
-        private const string LDAPath = @"C:\projects\FaceRecognition\FaceRecognition\bin\GeneratedData\lda.json";
-        private const string ResultPath = @"C:\Users\-\projects\FaceRecognition\PythonScripts\GeneratedData\result.json";
+        //private const string PCAPath = @"C:\projects\FaceRecognition\FaceRecognition\bin\GeneratedData\pca.json";
+        //private const string CNNPath = @"C:\projects\FaceRecognition\FaceRecognition\bin\GeneratedData\cnn.json";
+        //private const string LDAPath = @"C:\projects\FaceRecognition\FaceRecognition\bin\GeneratedData\lda.json";
+        //private const string ResultPath = @"C:\Users\-\projects\FaceRecognition\PythonScripts\GeneratedData\result.json";
 
         public static List<AlgorithmOutputModel> GetResults(AlgorithmType algorithmType = AlgorithmType.Multiple)
         {
@@ -55,24 +56,25 @@ namespace FaceRecognition.PythonScripts
 
         private static AlgorithmOutputModel GetData(AlgorithmType algorithmType)
         {
+            var resultsDirectory = GlobalConfig.ResultsDirectory;
             string filePath;
             switch (algorithmType)
             {
                 case AlgorithmType.PCA:
-                    filePath = PCAPath;
+                    filePath = Path.Combine(resultsDirectory, "pca.json");
                     break;
                 case AlgorithmType.CNN:
-                    filePath = CNNPath;
+                    filePath = Path.Combine(resultsDirectory, "cnn.json");
                     break;
                 case AlgorithmType.LDA:
-                    filePath = LDAPath;
+                    filePath = Path.Combine(resultsDirectory, "lda.json");
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(algorithmType), algorithmType, null);
             }
 
             //TODO remove
-            filePath = ResultPath;
+            filePath = Path.Combine(resultsDirectory, "result.json"); ;
 
             using (var streamReader = new StreamReader(filePath))
             {
