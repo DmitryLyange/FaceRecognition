@@ -47,9 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlgorithmService.cs" />
+    <Compile Include="ClassifierService.cs" />
     <Compile Include="Helpers\ScriptLauncher.cs" />
     <Compile Include="Models\AlgorithmOutputModel.cs" />
+    <Compile Include="Models\ClassifierOutput.cs" />
     <Compile Include="Models\PerformanceMetricGraph.cs" />
     <Compile Include="PerformanceMetricService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

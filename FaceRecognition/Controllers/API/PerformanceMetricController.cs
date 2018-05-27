@@ -29,5 +29,23 @@ namespace FaceRecognition
             var result = PerformanceMetricService.GetData(algorithmType);
             return result;
         }
+
+        [Route("Table")]
+        [HttpGet]
+        public List<AlgorithmOutputModel> GetTables()
+        {
+            var result = PerformanceMetricService.GetTable();
+            return result;
+        }
+
+        [Route("Table/{classifierName}")]
+        [HttpGet]
+        public List<AlgorithmOutputModel> GetTable(string classifierName)
+        {
+            AlgorithmType algorithmType;
+            Enum.TryParse(classifierName, out algorithmType);
+            var result = PerformanceMetricService.GetTable(algorithmType);
+            return result;
+        }
     }
 }

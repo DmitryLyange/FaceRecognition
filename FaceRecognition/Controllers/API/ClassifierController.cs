@@ -10,21 +10,15 @@ namespace FaceRecognition
     [RoutePrefix("Api/Classifier")]
     public class ClassifierController : ApiController
     {
-        [Route("")]
+        [Route("{classifierName}/{datasetType}/{imageFile}")]
         [HttpGet]
-        public List<AlgorithmOutputModel> Get()
+        public ClassifierOutput GetGraph(string classifierName, string datasetType, string imageFile)
         {
-            var result = AlgorithmService.GetResults();
-            return result;
-        }
-
-        [Route("{classifierName}")]
-        [HttpGet]
-        public List<AlgorithmOutputModel> Get(string classifierName)
-        {
-            AlgorithmType algorithmType;
-            Enum.TryParse(classifierName, out algorithmType);
-            var result = AlgorithmService.GetResults(algorithmType);
+            Classifier classifier;
+            Enum.TryParse(classifierName, out classifier);
+            DatasetType dataset;
+            Enum.TryParse(datasetType, out dataset);
+            var result = ClassifierService.Get(classifier, dataset, imageFile);
             return result;
         }
     }
