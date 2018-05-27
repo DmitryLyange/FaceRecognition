@@ -11,7 +11,7 @@ namespace FaceRecognition.PythonScripts
         private const string PCAPath = @"C:\projects\FaceRecognition\FaceRecognition\bin\GeneratedData\pca.json";
         private const string CNNPath = @"C:\projects\FaceRecognition\FaceRecognition\bin\GeneratedData\cnn.json";
         private const string LDAPath = @"C:\projects\FaceRecognition\FaceRecognition\bin\GeneratedData\lda.json";
-        private const string ResultPath = @"C:\projects\FaceRecognition\FaceRecognition\bin\GeneratedData\result.json";
+        private const string ResultPath = @"C:\Users\-\projects\FaceRecognition\PythonScripts\GeneratedData\result.json";
 
         public static List<AlgorithmOutputModel> GetResults(AlgorithmType algorithmType = AlgorithmType.Multiple)
         {
@@ -80,6 +80,13 @@ namespace FaceRecognition.PythonScripts
                 var allData = JsonConvert.DeserializeObject<List<List<int>>>(jsonData);
                 var oneRun = allData[0];
                 var performanceRates = CalculatePerformanceRatios(oneRun);
+
+                //var metricsData = JsonConvert.SerializeObject(performanceRates);
+                //using (var streamWriter = new StreamWriter(@"C:\Users\-\projects\FaceRecognition\FaceRecognition\bin\GeneratedData\pcaMetrics.json"))
+                //{
+                //    streamWriter.Write(metricsData);
+                //}
+
                 oneRun.RemoveAt(0);
                 return new AlgorithmOutputModel
                 {

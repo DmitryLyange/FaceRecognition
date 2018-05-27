@@ -50,6 +50,8 @@
     <Compile Include="AlgorithmService.cs" />
     <Compile Include="Helpers\ScriptLauncher.cs" />
     <Compile Include="Models\AlgorithmOutputModel.cs" />
+    <Compile Include="Models\PerformanceMetricGraph.cs" />
+    <Compile Include="PerformanceMetricService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +64,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="GeneratedData\pca.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="GeneratedData\pcaMetric.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="GeneratedData\result.json">
