@@ -4,12 +4,15 @@
 <link rel="stylesheet" type="text/css" href="../../Styles/main.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/britecharts/dist/css/britecharts.min.css">
 <div class='toolbar js-toolbar'>
-    <button class="button" onclick="trainFirst()">Train by first algorithm</button>
-    <button class="button" onclick="trainSecond()">Train by second algorithm</button>
+    <button class="button" onclick="runCnn()">Run CNN algorithm</button>
+    <button class="button" onclick="runObr()">Run OpenBR algorithm</button>
+    <button class="button" onclick="trainSecond()">Get algorithms comparison grapth</button>
     <button class="button" onclick="trainThird()">Train by third algorithm</button>
     @*<button class="button" onclick="createGraph()">createGraph</button>*@
 </div>
 <div class='main-body js-main-body' id='cardContainer'>
+    <div class='imageContainer' id='imageContainer'></div>
+
     <form class='card-container js-card' id='prototypeCard' style="display: none;">
         <div class="card-header">Some training data</div>
         <div class='card-body-container'>
@@ -80,6 +83,7 @@
     </div>
 </div>
 
+<div class='grathContainer' id='grathContainer'></div>
 
 <svg width="960" height="500"></svg>
 
