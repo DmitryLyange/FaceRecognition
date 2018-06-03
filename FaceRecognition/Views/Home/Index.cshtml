@@ -12,8 +12,18 @@
         <input type="file" onchange="setFileState(this.files)">
         <button class="button" onclick="runObr()">Run OpenBR algorithm</button>
     </div>
-    <button class="button" onclick="trainSecond()">Get algorithms comparison grapth</button>
-    <button class="button" onclick="trainThird()">Train by third algorithm</button>
+    <div>
+        <button class="button" onclick="trainThird()">Get algorithms comparison grapth</button>
+        <input list="metricsSelection" onchange="setMetricsState(this.value)">
+            <datalist id="metricsSelection">
+                <option value="Accuracy">
+                <option value="Precision">
+                <option value="Recall">
+                <option value="FallOut">
+                <option value="MissRate">
+            </datalist>
+    </div>
+    <button class="button" onclick="trainSecond()">Train by third algorithm</button>
     @*<button class="button" onclick="createGraph()">createGraph</button>*@
 </div>
 <div class='main-body js-main-body' id='cardContainer'>
