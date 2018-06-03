@@ -322,6 +322,7 @@ body {
   justify-content: space-between;
   margin: 1rem;
   border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .subImages {

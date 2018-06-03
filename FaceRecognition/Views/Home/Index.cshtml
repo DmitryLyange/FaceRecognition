@@ -4,8 +4,14 @@
 <link rel="stylesheet" type="text/css" href="../../Styles/main.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/britecharts/dist/css/britecharts.min.css">
 <div class='toolbar js-toolbar'>
-    <button class="button" onclick="runCnn()">Run CNN algorithm</button>
-    <button class="button" onclick="runObr()">Run OpenBR algorithm</button>
+    <div>
+        <input type="file" onchange="setFileState(this.files)">
+        <button class="button" onclick="runCnn()">Run CNN algorithm</button>
+    </div>
+    <div>
+        <input type="file" onchange="setFileState(this.files)">
+        <button class="button" onclick="runObr()">Run OpenBR algorithm</button>
+    </div>
     <button class="button" onclick="trainSecond()">Get algorithms comparison grapth</button>
     <button class="button" onclick="trainThird()">Train by third algorithm</button>
     @*<button class="button" onclick="createGraph()">createGraph</button>*@
