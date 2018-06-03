@@ -4,17 +4,19 @@
 <link rel="stylesheet" type="text/css" href="../../Styles/main.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/britecharts/dist/css/britecharts.min.css">
 <div class='toolbar js-toolbar'>
-    <div>
-        <input type="file" onchange="setFileState(this.files)">
-        <button class="button" onclick="runCnn()">Run CNN algorithm</button>
+    <div class="complexSelection">
+        <span class="algorithmTitle">CNN algorithm</span>
+        <input type="file" onchange="setFileState(this.files)"  placeholder="Select metric">
+        <button class="button" onclick="runCnn()">Run!</button>
     </div>
-    <div>
+    <div class="complexSelection">
+        <span class="algorithmTitle">OpenBR algorithm</span>
         <input type="file" onchange="setFileState(this.files)">
-        <button class="button" onclick="runObr()">Run OpenBR algorithm</button>
+        <button class="button" onclick="runObr()">Run!</button>
     </div>
-    <div>
-        <button class="button" onclick="trainThird()">Get algorithms comparison grapth</button>
-        <input list="metricsSelection" onchange="setMetricsState(this.value)">
+    <div class="complexSelection">
+        <span class="algorithmTitle">Algorithms comparison grapth</span>
+            <input list="metricsSelection" onchange="setMetricsState(this.value)" placeholder="Select metric">
             <datalist id="metricsSelection">
                 <option value="Accuracy">
                 <option value="Precision">
@@ -22,12 +24,15 @@
                 <option value="FallOut">
                 <option value="MissRate">
             </datalist>
+
+        <button class="button" onclick="trainThird()">Get grapth</button>
     </div>
     <button class="button" onclick="trainSecond()">Train by third algorithm</button>
     @*<button class="button" onclick="createGraph()">createGraph</button>*@
 </div>
 <div class='main-body js-main-body' id='cardContainer'>
     <div class='imageContainer' id='imageContainer'></div>
+<div class='grathContainer' id='grathContainer'></div>
 
     <form class='card-container js-card' id='prototypeCard' style="display: none;">
         <div class="card-header">Some training data</div>
@@ -98,8 +103,6 @@
         <div class="cell10-grid-cell-new grid-cell">cell10</div>
     </div>
 </div>
-
-<div class='grathContainer' id='grathContainer'></div>
 
 <svg width="960" height="500"></svg>
 
