@@ -12,7 +12,7 @@ namespace FaceRecognition
     {
         [Route("{classifierName}/{datasetType}/{imageFile}")]
         [HttpGet]
-        public ClassifierOutput GetGraph(string classifierName, string datasetType, string imageFile)
+        public ClassifierOutput Get(string classifierName, string datasetType, string imageFile)
         {
             Classifier classifier;
             Enum.TryParse(classifierName, out classifier);

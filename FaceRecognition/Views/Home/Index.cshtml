@@ -15,7 +15,7 @@
         <button class="button" onclick="runObr()">Run!</button>
     </div>
     <div class="complexSelection">
-        <span class="algorithmTitle">Algorithms comparison grapth</span>
+        <span class="algorithmTitle">Algorithms comparison graph</span>
             <input list="metricsSelection" onchange="setMetricsState(this.value)" placeholder="Select metric">
             <datalist id="metricsSelection">
                 <option value="Accuracy">
@@ -25,9 +25,9 @@
                 <option value="MissRate">
             </datalist>
 
-        <button class="button" onclick="trainThird()">Get grapth</button>
+        <button class="button" onclick="getPmGraph()">Get graph</button>
     </div>
-    <button class="button" onclick="trainSecond()">Train by third algorithm</button>
+    <button class="button" onclick="getConfTable()">Get table of confusion</button>
     @*<button class="button" onclick="createGraph()">createGraph</button>*@
 </div>
 <div class='main-body js-main-body' id='cardContainer'>
