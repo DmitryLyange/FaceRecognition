@@ -20,28 +20,28 @@ namespace FaceRecognition.PythonScripts
                         {
                             new ResultImage
                             {
-                                FileName = "Alvaro_Uribe_0012",
-                                Probability = 70.5
+                                FileName = "Alvaro_Uribe_0013",
+                                Probability = 100
                             },
                             new ResultImage
                             {
-                                FileName = "Alvaro_Uribe_0013",
-                                Probability = 60.0
+                                FileName = "Alvaro_Uribe_0012",
+                                Probability = 83.2
                             },
                             new ResultImage
                             {
                                 FileName = "Alvaro_Uribe_0005",
-                                Probability = 53.2
+                                Probability = 71.7
                             },
                             new ResultImage
                             {
-                                FileName = "Alvaro_Uribe_0002",
-                                Probability = 30
+                                FileName = "Alvaro_Uribe_0004",
+                                Probability = 65.1
                             },
                             new ResultImage
                             {
-                                FileName = "Alvaro_Uribe_0001",
-                                Probability = 20
+                                FileName = "Alvaro_Uribe_0006",
+                                Probability = 62.1
                             }
                         }
                     };
@@ -53,28 +53,28 @@ namespace FaceRecognition.PythonScripts
                         {
                             new ResultClass
                             {
-                                ClassLabel = "Alvaro_Uribe",
-                                Probability = 75.5
+                                ClassLabel = "Jennifer_Capriati",
+                                Probability = 15.4
                             },
                             new ResultClass
                             {
-                                ClassLabel = "Alejandro_Toledo",
-                                Probability = 60
+                                ClassLabel = "Amelie_Mauresmo",
+                                Probability = 7.3
                             },
                             new ResultClass
                             {
-                                ClassLabel = "Angelina_Jolie",
-                                Probability = 50
+                                ClassLabel = "Anna_Kournikova",
+                                Probability = 6.8
                             },
                             new ResultClass
                             {
-                                ClassLabel = "Bill_Gates",
-                                Probability = 40
+                                ClassLabel = "Lleyton_Hewitt",
+                                Probability = 3.5
                             },
                             new ResultClass
                             {
-                                ClassLabel = "Colin_Powell",
-                                Probability = 30
+                                ClassLabel = "Serena_Williams",
+                                Probability = 2.7
                             }
                         }
                     };

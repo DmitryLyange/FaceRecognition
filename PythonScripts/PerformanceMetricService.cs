@@ -15,23 +15,29 @@ namespace FaceRecognition.PythonScripts
             var result = new PerformanceMetricGraph
             {
                 MetricName = metric.ToString(),
-                XAxis = "x TODO",
-                YAxis = "y TODO"
+                XAxis = "",
+                YAxis = ""
             };
 
             var graphs = new List<GraphData>();
             var graph1 = new GraphData
             {
                 GraphName = "First graph",
-                GraphLines = new List<GraphPoint> { new GraphPoint(5, 0.3), new GraphPoint(10, 0.4), new GraphPoint(50, 0.3) }
+                GraphLines = new List<GraphPoint> { new GraphPoint(5, 0.453), new GraphPoint(10, 0.62), new GraphPoint(50, 0.76) }
             };
             graphs.Add(graph1);
             var graph2 = new GraphData
             {
                 GraphName = "Second graph",
-                GraphLines = new List<GraphPoint> { new GraphPoint(5, 0.6), new GraphPoint(10, 0.5), new GraphPoint(50, 0.2) }
+                GraphLines = new List<GraphPoint> { new GraphPoint(5, 0.475), new GraphPoint(10, 0.654), new GraphPoint(50, 0.798) }
             };
             graphs.Add(graph2);
+            var graph3 = new GraphData
+            {
+                GraphName = "Third graph",
+                GraphLines = new List<GraphPoint> { new GraphPoint(5, 0.522), new GraphPoint(10, 0.732), new GraphPoint(50, 0.885) }
+            };
+            graphs.Add(graph3);
 
             result.Graphs = graphs;
             return result;
@@ -114,7 +120,7 @@ namespace FaceRecognition.PythonScripts
             }
 
             //TODO remove
-            filePath = Path.Combine(resultsDirectory, "result.json"); ;
+            filePath = Path.Combine(resultsDirectory, "result.json");
 
             using (var streamReader = new StreamReader(filePath))
             {
@@ -123,11 +129,11 @@ namespace FaceRecognition.PythonScripts
                 var oneRun = allData[0];
                 var performanceRates = CalculatePerformanceRatios(oneRun);
 
-                //var metricsData = JsonConvert.SerializeObject(performanceRates);
-                //using (var streamWriter = new StreamWriter(@"C:\Users\-\projects\FaceRecognition\FaceRecognition\bin\GeneratedData\pcaMetrics.json"))
-                //{
-                //    streamWriter.Write(metricsData);
-                //}
+                var metricsData = JsonConvert.SerializeObject(performanceRates);
+                using (var streamWriter = new StreamWriter(@"C:\projects\FaceRecognition\PythonScripts\GeneratedData\pcaMetricss.json", true))
+                {
+                    streamWriter.Write(metricsData);
+                }
 
                 oneRun.RemoveAt(0);
                 return new AlgorithmOutputModel
@@ -199,7 +205,7 @@ namespace FaceRecognition.PythonScripts
                 recallM =
                     (w1 * (c[1]) / (c[1] + c[2] + c[5] + c[9]) +
                      w2 * (c[6]) / (c[3] + c[6] + c[7] + c[10]) +
-                     w3 * (c[11]) / (c[4] + c[8] + c[10])) /
+                     w3 * (c[11]) / (c[4] + c[8] + c[11])) /
                     (w1 + w2 + w3);
             }
             catch (Exception)

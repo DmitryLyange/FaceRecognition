@@ -41,7 +41,7 @@ def main():
         else:
             true_category = categories[image_class]
 
-        if max(probability) >= 0.6:
+        if max(probability) >= 0.05:
             answer = probability.index(max(probability))
             answer_class = face_recognizer.get_target_names()[answer]
             predicted_category = categories[answer_class]
